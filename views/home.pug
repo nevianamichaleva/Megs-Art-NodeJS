@@ -1,2 +1,193 @@
 extends _layout
 block content
+    a.cd-btn(href='#')
+    #wrap
+      .cd-panel.from-left
+        a.cd-panel-close(href='#')
+        p.panel-heading Background textures
+        p.panel-description Choose a custom BG image
+        .bg-images-container
+      header
+        #header-common.inner-page
+          #sharing-icons
+            a(href='#')
+              img(src='images/twitter.png', alt='Share on Twitter')
+            a(href='#')
+              img(src='images/rss.png', alt='Share on Twitter')
+            a(href='#')
+              img(src='images/facebook.png', alt='Share on Twitter')
+          form#search-box
+            input#search-input(type='text', placeholder='Search this website...')
+            input#search-submit(type='image', src='images/search.png', alt='Submit')
+          #logo
+            img(src='images/logo-s.png')
+            span#logo-text Chameleon
+            span#slogan Your slogan goes here
+          nav#nav.inner-page
+            ul
+              li
+                a(href='/') Home
+              li
+                a(href='/about') About
+              li
+                a(href='/contact') Contact
+              li
+                a(href='/templates') Page Templates
+              li
+                a(href='/shortcodes') Shortcodes
+              li
+                a(href='/blog') Blog
+        #location-bar.inner-page
+          ul
+            li
+              a(href='/') Home
+            li
+              a(href='/about') Some Category
+            li
+              a(href='/post') Post Title Goes Here
+        #page-heading.inner-page
+          h1 Blog posts
+          h3 Blog posts page description goes here
+      #main-content.inner-page.self-clear
+        aside.inner-page
+          #aside-blog.aside-element
+            h3 From the blog
+            ul
+              li
+                a(href='/post') Curabitur blandit rutrum felis pretium
+              li
+                a(href='/post') Pharetra donec dictum felis eu quis
+              li
+                a(href='/post') Eros pretium vulputate dictum donec
+              li
+                a(href='/post') Etiam quis nulla ac turpis moles
+              li
+                a(href='/post') Suspendisse potenti integer donec
+              li
+                a(href='/post') Accumsan nunc sollicitudin id pelle
+          #aside-archives.aside-element
+            h3 Archives
+            ul
+              li
+                a(href='/post') Curabitur blandit rutrum
+              li
+                a(href='/post') Pharetra donec dictum felis eu
+              li
+                a(href='/post') Eros pretium vulputate
+              li
+                a(href='/post') Etiam quis nulla ac turpis moles
+              li
+                a(href='/post') Suspendisse potenti integer
+              li
+                a(href='/post') Accumsan nunc sollicitudin id
+          #aside-posts.aside-element
+            h3 Recent posts
+            ul
+              li
+                a(href='/post') Curabitur blandit rutrum
+              li
+                a(href='/post') Pharetra donec dictum felis eu
+              li
+                a(href='/post') Eros pretium vulputate
+              li
+                a(href='/post') Etiam quis nulla ac turpis moles
+              li
+                a(href='/post') Suspendisse potenti integer
+              li
+                a(href='/post') Accumsan nunc sollicitudin id
+        #main.inner-page
+          .post-preview
+            h1 Post Title Goes Right Here
+            p.post-info
+              | Posted by 
+              span.post-user Admin
+              |  on 
+              span.post-date March 13, 2011
+              |  in 
+              span.post-category Some Category
+              |  |
+              span.post-comments 30 Comments
+            .post-img-container
+              img(src='images/img-s-1.jpg')
+            p.post-text
+              | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis
+              | nulla ac turpis molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac accumsan
+              | nunc sollicitudin id. Pellentesque tortor lectus, faucibus vitae fermentum vitae, laoreet sit amet erat. Cras
+              | luctus, turpis a suscipit venenatis, lorem lectus bibendum neque, quis congue dui tellus in lorem. Praesent
+              | rhoncus euismod elementum. Pellentesque tempor, metus quis dignissim imperdiet, risus mi volutpat massa, ut
+              | consequat eros lacus ultricies. asdlksadjalsdkjasldkjasldkjalskdj asdklja asdlkja lskdj alskdj alskd askld jad
+            a.btn.post-link(href='/post') Read More
+          .post-preview
+            h1 Post Title Goes Right Here
+            p.post-info
+              | Posted by 
+              span.post-user Admin
+              |  on 
+              span.post-date March 13, 2011
+              |  in 
+              span.post-category Some Category
+              |  |
+              span.post-comments 30 Comments
+            .post-img-container
+              img(src='images/img-s-2.jpg')
+            p.post-text
+              | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis
+              | nulla ac turpis molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac accumsan
+              | nunc sollicitudin id. Pellentesque tortor lectus, faucibus vitae fermentum vitae, laoreet sit amet erat. Cras
+              | luctus, turpis a suscipit venenatis, lorem lectus bibendum neque, quis congue dui tellus in lorem. Praesent
+              | rhoncus euismod elementum. Pellentesque tempor, metus quis dignissim imperdiet, risus mi volutpat massa, ut
+              | consequat eros lacus ultricies. asdlksadjalsdkjasldkjasldkjalskdj asdklja asdlkja lskdj alskdj alskd askld jad
+            a.btn.post-link(href='/post') Read More
+          .pager
+            .pager-buttons
+              a.btn.post-link.current(href='#') 1
+              a.btn.post-link(href='#') 2
+              a.btn.post-link(href='#') 3
+      footer
+        #site-info.footer-element
+          img(src='images/logo-footer.png')
+          h6 © Chameleon Theme 2010
+          p
+            | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis nulla ac turpis
+            | molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac
+        #recent-posts.footer-element.footer-list
+          h3 Recent posts
+          ul
+            li
+              a(href='/post') Curabitur blandit rutrum
+            li
+              a(href='/post') Pharetra donec dictum felis eu
+            li
+              a(href='/post') Eros pretium vulputate
+            li
+              a(href='/post') Etiam quis nulla ac turpis moles
+            li
+              a(href='/post') Suspendisse potenti integer
+            li
+              a(href='/post') Accumsan nunc sollicitudin id
+        #text-widget.footer-element
+          h3 Text widget
+          p
+            | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis nulla ac turpis
+            | molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac accumsan nunc sollicitudin
+            | id.
+        #recent-comments.footer-element.footer-list
+          h3 Recent comments
+          ul
+            li
+              a(href='/post') Curabitur blandit rutrum
+            li
+              a(href='/post') Pharetra donec dictum felis eu
+            li
+              a(href='/post') Eros pretium vulputate
+            li
+              a(href='/post') Etiam quis nulla ac turpis moles
+            li
+              a(href='/post') Suspendisse potenti integer
+            li
+              a(href='/post') Accumsan nunc sollicitudin id
+        p
+          | Designed by 
+          i Elegant WordPress Themes
+          |  | Powered by 
+          i WordPress

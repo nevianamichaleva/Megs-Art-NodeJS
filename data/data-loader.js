@@ -11,15 +11,11 @@ module.exports = function(connectionString) {
     mongoose.connect(connectionString);
     mongoose.Promise = global.Promise;
 
-    //let City = require("../models/city-model.js");
-    //let Country = require("../models/country-model.js");
-    //let Fraction = require("../models/fraction-model.js");
-    //let Planet = require("../models/planet-model.js");
-    //let Power = require("../models/power-model.js");
-    //let Superhero = require("../models/superhero-model.js");
-    //let User = require("../models/user-model.js");
-    //
-    //let models = { City, Country, Fraction, Planet, Power, Superhero, User };
+    let Art = require("../models/art-model.js");
+    let Category = require("../models/category-model.js");
+    let User = require("../models/user-model.js");
+
+    let models = { Art, Category, User };
 
     let data = {};
 

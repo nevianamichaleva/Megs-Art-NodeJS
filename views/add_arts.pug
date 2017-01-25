@@ -1,0 +1,70 @@
+extends _layout
+block content
+ .row.main
+   .panel-heading
+    .panel-title.text-center
+      h1.title Добавяне на картина
+      hr
+    .main-login.main-center
+      form.form-horizontal(method='post', action='#', enctype="multipart/form-data")
+       .form-group
+        label.cols-sm-2.control-label(for='title') Име на картина
+                                                  <span class="red">*</span>
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-user.fa(aria-hidden='true')
+              input#title.form-control(type='text', name='title', placeholder='Въведете име на картина') 
+       .form-group
+        label.cols-sm-2.control-label(for='description') Описание
+                                                     <span class="red">*</span> 
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-info-circle(aria-hidden='description')
+              input#description.form-control(type='text', name='description', placeholder='Въведете кратко описание')  
+       .form-group
+         .checkbox
+          label
+              input(type='checkbox', name='frame', value='')  
+              | Рамка
+       .form-group
+        label.cols-sm-2.control-label(for='size') Размери
+                                                  <span class="red">*</span>
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-address-card-o(aria-hidden='true')
+              input#size.form-control(type='text', name='size', placeholder='Въведете размери')  
+       .form-group
+        label.cols-sm-2.control-label(for='canvas') Платно
+                                                     <span class="red">*</span>
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-address-card-o(aria-hidden='true')
+              textarea#canvas.form-control(type='text', name='canvas', placeholder='Въведете платно')  
+       .form-group
+        label.cols-sm-2.control-label(for='paint') Бои
+                                                               <span class="red">*</span>
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-user-circle-o(aria-hidden='true')
+              input#paint.form-control(type='text', name='paint', placeholder='Въведете вид бои')  
+       .form-group
+        label.cols-sm-2.control-label(for='price') Цена
+        .cols-sm-10
+          .input-group
+            span.input-group-addon
+              i.fa.fa-envelope.fa(aria-hidden='true')
+              input#price.form-control(type='text', name='price', placeholder='Въведете цена')  
+       .form-group
+        label.control-label Заглавно изображение
+        input#titleImage.file-loading(type="file", name="titleIimage")   
+       .form-group
+        label.control-label Изображение
+        input#image.file-loading(type="file", name="image")        
+       .form-group
+           button.btn.btn-primary.btn-lg.btn-block.login-button
+               | Запис

@@ -25,6 +25,6 @@ let ArtSchema = new mongoose.Schema({
     price: Number
 });
 
-mongoose.model("Art", artSchema);
+mongoose.model("Art", ArtSchema);
 let ArtModel = mongoose.model("Art");
 module.exports = ArtModel;
