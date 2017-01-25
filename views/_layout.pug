@@ -1,0 +1,49 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Megs Art
+    link(rel='stylesheet', type='text/css', href='/static/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//bootswatch.com/united/bootstrap.min.css')
+    link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+    link(href='//getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
+  body
+    header
+      nav.navbar.navbar-default.navbar-fixed-top
+        .container
+          .navbar-header
+            a.navbar-brand(href='#') Megs Art
+          #navbar.navbar-collapse.collapse
+            ul.nav.navbar-nav
+              li
+                a(href='/home') Начало
+              li
+                a(href='/about') За проекта
+    block content
+    br
+    footer.footer.text-center.footer-body
+      .container-fluid
+        .footer-header
+          p.navbar-center
+            | Web Applications with Node.js © 2016 
+            a(href='https://telerikacademy.com/') Telerik Academy
+          p.navbar-center
+            | Application by 
+            a(href='https://github.com/Tyche-Team', target='_blanc') Tyche Team
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    script.
+      window.jQuery || document.write('<script src="../node_modules/jquery/dist/jquery.min.js"><\\/script>')
+    script(src='/static/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    // Just to make our placeholder images work. Don't actually copy the next line!
+    script(src='//getbootstrap.com/assets/js/vendor/holder.min.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='//getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
+    // jQuery
+    script(src="//code.jquery.com/jquery-3.1.1.js", integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=", crossorigin="anonymous")
+    script(src="//code.jquery.com/ui/1.12.1/jquery-ui.js", integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=", crossorigin="anonymous")
