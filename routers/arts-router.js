@@ -2,7 +2,7 @@
 
 const express = require("express"),
     multer = require('multer');
-    let Router = express.Router;
+let Router = express.Router;
 
 module.exports = function({ app, controllers }) {
     let controller = controllers.arts;
@@ -11,7 +11,7 @@ module.exports = function({ app, controllers }) {
 
     router
         .get("/create", controller.getBlankArtsSettings)
-        .post("/create", multer({ dest: './uploads/' }).single('upl'), controller.createArts)
+        .post("/create", multer({ dest: './uploads/' }).fields([{ name: 'upl' }, { name: 'image' }]), controller.createArts)
 
     app.use("/arts", router);
 

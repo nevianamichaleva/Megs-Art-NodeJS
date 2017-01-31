@@ -7,6 +7,9 @@ module.exports = function(models) {
     let { Art } = models;
     return {
         createArts(data) {
+            //console.log(data.titleImage[0].path);
+            //console.log(data.image);
+
             const art = new Art({
                 title: data.title,
                 description: data.description,
@@ -14,8 +17,8 @@ module.exports = function(models) {
                 canvas: data.canvas,
                 paint: data.paint,
                 price: data.price,
-                titleImage: data.titleImage,
-                image: data.image
+                titleImage: data.titleImage[0].path,
+                image: data.image[0].path
             });
             return new Promise((resolve, reject) => {
                 art.save(err => {

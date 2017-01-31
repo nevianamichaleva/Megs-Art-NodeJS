@@ -17,12 +17,12 @@ let ArtSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    frame: Boolean,
-    canvas: String,
-    paint: String,
-    titleImage: String,
-    image: String,
-    price: Number
+    frame: { type: Boolean },
+    canvas: { type: String },
+    paint: { type: String },
+    titleImage: { type: String },
+    image: { type: String },
+    price: { type: Number }
 });
 
 mongoose.model("Art", ArtSchema);

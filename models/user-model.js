@@ -14,12 +14,13 @@ let userSchema = new mongoose.Schema({
         minlength: constants.minUsernameLength,
         maxlength: constants.maxUsernameLength
     },
-    name: String,
+    name: { type: String },
+    role: { type: String },
     email: {
         type: String,
         required: true
     },
-    password: String
+    password: { type: String }
 });
 
 userSchema.methods.generateHash = function(password) {

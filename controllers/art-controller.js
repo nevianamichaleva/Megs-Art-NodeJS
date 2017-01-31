@@ -17,10 +17,10 @@ module.exports = function(data) {
                 canvas: req.body.canvas,
                 paint: req.body.paint,
                 price: req.body.price,
-                titleImage: req.body.titleImage,
-                image: req.body.image
+                titleImage: req.files['upl'],
+                image: req.files['image']
             };
-
+            console.log(req.files);
             data.createArts(art)
                 .then(() => {
                     return res.redirect("/home");

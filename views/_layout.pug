@@ -5,10 +5,10 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='')
     title Megs Art
-    link(rel='stylesheet', type='text/css', href='/static/bower_components/bootstrap/dist/css/bootstrap.min.css')
-    link(rel='stylesheet', href='//bootswatch.com/united/bootstrap.min.css')
-    link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
-    link(href='//getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
+    //link(rel='stylesheet', type='text/css', href='/static/bower_components/bootstrap/dist/css/bootstrap.min.css')
+    //link(rel='stylesheet', href='//bootswatch.com/united/bootstrap.min.css')
+    //link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
+    //link(href='//getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css', rel='stylesheet')
   body
     header
       nav.navbar.navbar-default.navbar-fixed-top
@@ -21,6 +21,10 @@ html(lang='en')
                 a(href='/home') Начало
               li
                 a(href='/about') За проекта
+              li
+                a(href='/login') Вход
+              li
+                a(href='/register') Регистрация
     block content
     br
     footer.footer.text-center.footer-body
@@ -36,14 +40,14 @@ html(lang='en')
       Bootstrap core JavaScript
       ==================================================
     // Placed at the end of the document so the pages load faster
-    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
-    script.
+    //script(src='//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+    //script.
       window.jQuery || document.write('<script src="../node_modules/jquery/dist/jquery.min.js"><\\/script>')
-    script(src='/static/bower_components/bootstrap/dist/js/bootstrap.min.js')
+    //script(src='/static/bower_components/bootstrap/dist/js/bootstrap.min.js')
     // Just to make our placeholder images work. Don't actually copy the next line!
-    script(src='//getbootstrap.com/assets/js/vendor/holder.min.js')
+    //script(src='//getbootstrap.com/assets/js/vendor/holder.min.js')
     // IE10 viewport hack for Surface/desktop Windows 8 bug
-    script(src='//getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
+    //script(src='//getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
     // jQuery
-    script(src="//code.jquery.com/jquery-3.1.1.js", integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=", crossorigin="anonymous")
-    script(src="//code.jquery.com/ui/1.12.1/jquery-ui.js", integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=", crossorigin="anonymous")
+    //script(src="//code.jquery.com/jquery-3.1.1.js", integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=", crossorigin="anonymous")
+    //script(src="//code.jquery.com/ui/1.12.1/jquery-ui.js", integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=", crossorigin="anonymous")

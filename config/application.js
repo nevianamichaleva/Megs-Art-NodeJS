@@ -3,6 +3,7 @@
 const express = require("express"),
     bodyParser = require("body-parser"),
     cookieParser = require("cookie-parser"),
+    flash = require('connect-flash'),
     session = require("express-session");
 
 module.exports = function({ data }) {
@@ -15,6 +16,7 @@ module.exports = function({ data }) {
     app.use(cookieParser());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
+    app.use(flash());
     app.use(session({
         secret: "purple unicorn",
         resave: true,
