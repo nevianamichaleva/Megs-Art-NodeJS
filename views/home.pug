@@ -53,18 +53,9 @@ block content
           #aside-blog.aside-element
             h3 From the blog
             ul
-              li
-                a(href='/post') Curabitur blandit rutrum felis pretium
-              li
-                a(href='/post') Pharetra donec dictum felis eu quis
-              li
-                a(href='/post') Eros pretium vulputate dictum donec
-              li
-                a(href='/post') Etiam quis nulla ac turpis moles
-              li
-                a(href='/post') Suspendisse potenti integer donec
-              li
-                a(href='/post') Accumsan nunc sollicitudin id pelle
+              each art in model
+                  li
+                    a(href='/post')= art.title
           #aside-archives.aside-element
             h3 Archives
             ul
@@ -96,48 +87,22 @@ block content
               li
                 a(href='/post') Accumsan nunc sollicitudin id
         #main.inner-page
-          .post-preview
-            h1 Post Title Goes Right Here
-            p.post-info
-              | Posted by 
-              span.post-user Admin
-              |  on 
-              span.post-date March 13, 2011
-              |  in 
-              span.post-category Some Category
-              |  |
-              span.post-comments 30 Comments
-            .post-img-container
-              img(src='images/img-s-1.jpg')
-            p.post-text
-              | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis
-              | nulla ac turpis molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac accumsan
-              | nunc sollicitudin id. Pellentesque tortor lectus, faucibus vitae fermentum vitae, laoreet sit amet erat. Cras
-              | luctus, turpis a suscipit venenatis, lorem lectus bibendum neque, quis congue dui tellus in lorem. Praesent
-              | rhoncus euismod elementum. Pellentesque tempor, metus quis dignissim imperdiet, risus mi volutpat massa, ut
-              | consequat eros lacus ultricies. asdlksadjalsdkjasldkjasldkjalskdj asdklja asdlkja lskdj alskdj alskd askld jad
-            a.btn.post-link(href='/post') Read More
-          .post-preview
-            h1 Post Title Goes Right Here
-            p.post-info
-              | Posted by 
-              span.post-user Admin
-              |  on 
-              span.post-date March 13, 2011
-              |  in 
-              span.post-category Some Category
-              |  |
-              span.post-comments 30 Comments
-            .post-img-container
-              img(src='images/img-s-2.jpg')
-            p.post-text
-              | Curabitur blandit rutrum pharetra. Donec dictum felis eu eros pretium vulputate. Etiam quis
-              | nulla ac turpis molestie tempus et in purus. Suspendisse potenti. Integer accumsan accumsan est, ac accumsan
-              | nunc sollicitudin id. Pellentesque tortor lectus, faucibus vitae fermentum vitae, laoreet sit amet erat. Cras
-              | luctus, turpis a suscipit venenatis, lorem lectus bibendum neque, quis congue dui tellus in lorem. Praesent
-              | rhoncus euismod elementum. Pellentesque tempor, metus quis dignissim imperdiet, risus mi volutpat massa, ut
-              | consequat eros lacus ultricies. asdlksadjalsdkjasldkjasldkjalskdj asdklja asdlkja lskdj alskdj alskd askld jad
-            a.btn.post-link(href='/post') Read More
+          each art in model
+              .post-preview
+                h1= art.title
+                p.post-info
+                  | Posted by 
+                  span.post-user Admin
+                  |  on 
+                  span.post-date March 13, 2011
+                  |  in 
+                  span.post-category Some Category
+                  |  |
+                  span.post-comments 30 Comments
+                .post-img-container
+                  img(src='.\\'+art.titleImage)
+                p.post-text= art.description 
+                a.btn.post-link(href='/post') Read More
           .pager
             .pager-buttons
               a.btn.post-link.current(href='#') 1

@@ -1,10 +1,15 @@
 /* globals module */
 
-module.exports = function() {
+module.exports = function(data) {
     return {
         name: "home",
         home(req, res) {
-            return res.render("home");
+            return data.getAllArts()
+                .then(arts => {
+                    res.render("home", {
+                        model: arts
+                    })
+                })
         }
-    };
+    }
 };

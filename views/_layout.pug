@@ -5,6 +5,7 @@ html(lang='en')
     meta(name='description', content='')
     meta(name='author', content='')
     title Megs Art
+    link(href="/static/layout/main.css", rel='stylesheet')
     //link(rel='stylesheet', type='text/css', href='/static/bower_components/bootstrap/dist/css/bootstrap.min.css')
     //link(rel='stylesheet', href='//bootswatch.com/united/bootstrap.min.css')
     //link(rel="stylesheet", href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css")
@@ -25,6 +26,8 @@ html(lang='en')
                 a(href='/login') Вход
               li
                 a(href='/register') Регистрация
+              li
+                a(href='/logout') Изход
     block content
     br
     footer.footer.text-center.footer-body

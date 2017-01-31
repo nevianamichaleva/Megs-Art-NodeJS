@@ -20,7 +20,7 @@ module.exports = function(data) {
                 titleImage: req.files['upl'],
                 image: req.files['image']
             };
-            console.log(req.files);
+            //console.log(req.files);
             data.createArts(art)
                 .then(() => {
                     return res.redirect("/home");

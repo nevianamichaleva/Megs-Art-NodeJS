@@ -11,7 +11,7 @@ module.exports = function({ app, controllers }) {
 
     router
         .get("/create", controller.getBlankArtsSettings)
-        .post("/create", multer({ dest: './uploads/' }).fields([{ name: 'upl' }, { name: 'image' }]), controller.createArts)
+        .post("/create", multer({ dest: './public/uploads/' }).fields([{ name: 'upl' }, { name: 'image' }]), controller.createArts)
 
     app.use("/arts", router);
 
